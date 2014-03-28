@@ -5,7 +5,7 @@
     public static void Main(string[] args)
     {
 //      filelisteners.Bootstrap.main();
-      searchengine.Bootstrap.main();
+      searchengine.Bootstrap.main(args);
     } 
   }
 }
