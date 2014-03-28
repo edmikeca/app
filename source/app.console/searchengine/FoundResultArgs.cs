@@ -9,5 +9,6 @@ namespace app.console.searchengine
     public class FoundResultArgs
     {
         //TODO: Create structure of the http responce
+        public string result { get; set; }
     }
 }

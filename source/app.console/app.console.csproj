@@ -60,6 +60,7 @@
     <Compile Include="searchengine\Bootstrap.cs" />
     <Compile Include="searchengine\FoundResult.cs" />
     <Compile Include="searchengine\FoundResultArgs.cs" />
+    <Compile Include="searchengine\ImageListener.cs" />
     <Compile Include="searchengine\ResultListener.cs" />
     <Compile Include="searchengine\Search.cs" />
   </ItemGroup>

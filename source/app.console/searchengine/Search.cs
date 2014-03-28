@@ -17,9 +17,9 @@ namespace app.console.searchengine
 
         public static void run(SearchOptions options, params FoundResult[] listeners)
         {
-            var finder = new Search();
-            foreach (var listener in listeners) finder.result_found += listener;
-            finder.find(options);
+            var searcher = new Search();
+            foreach (var listener in listeners) searcher.result_found += listener;
+            searcher.find(options);
         }
 
 
@@ -30,12 +30,10 @@ namespace app.console.searchengine
             var client = new HttpClient();
             var resp = client.GetAsync(options.url).Result;
             resp.EnsureSuccessStatusCode();
-            var rs = resp.Content.ReadAsStringAsync();
+            var rs = resp.Content.ReadAsStringAsync().Result;
 
 
-//            Console.WriteLine(rs);
-
-            on_search_found(new FoundResultArgs());
+            on_search_found(new FoundResultArgs{result =  rs});
 
         }
 

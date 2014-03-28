@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace app.console.searchengine
 {
-    public class ResultListener
+    public class ImageListener
     {
-
-        public void parse_result(object sender, FoundResultArgs args)
+        public void parse_images(object sender, FoundResultArgs args)
         {
-            
+
         }
     }
 }
